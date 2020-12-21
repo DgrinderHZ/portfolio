@@ -1,0 +1,8 @@
+<h1>All jobs</h1>
+<ul>
+    {% for job in jobs %}
+    <li>
+        <p>{{ job.summary }}</p>
+    </li>
+    {% endfor %}
+</ul>
