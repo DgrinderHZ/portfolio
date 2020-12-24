@@ -22,7 +22,8 @@ import jobs.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', jobs.views.hassan, name='home'),
+    path('', jobs.views.home, name='home'),
+    path('jobs/<int:id>/', jobs.views.detail, name='detail'),
 ] 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

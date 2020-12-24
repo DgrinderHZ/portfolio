@@ -95,49 +95,17 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Hassan ZEKKOURI</h1>
-                    <p class="lead text-muted">Hi my name is Hassan, I enjoy building apps and websites with Python. I
-                        also enjoy playing football.</p>
-                    <img src="{% static 'me.jpg' %}" height="200px">
+                    <h1 class="fw-light">Job detail</h1>
+                    <p class="lead text-muted">{{job.summary}}.</p>
+                    <img src="{{ job.image.url }}" height="200px">
                     <p>
-                        <a href="mailto:hassanzekkouri@gmail.com" class="btn btn-primary my-2">Email me</a>
-                        <a href="https://github.com/DgrinderHZ" target="_blank"
-                            class="btn btn-secondary my-2">Github</a>
+                        <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
                     </p>
 
                 </div>
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    {% for job in jobs %}
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <a href="{% url 'detail' job.id %}">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                    src="{{ job.image.url }}"></img>
-
-
-                                <div class="card-body">
-                                    <p class="card-text">{{job.summary}}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
 
     </main>
 
