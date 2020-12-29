@@ -7,13 +7,14 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Job detail</h1>
+                    <h1 class="fw-light">{{ job.name }} detail</h1>
                     <p class="lead text-muted">{{job.summary}}.</p>
                     <img src="{{ job.image.url }}" height="200px">
                     <p>
-                        <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+                        <a href="{{job.github}}" class="btn btn-primary" target="_blank">Github Repo</a>
+                        <a href="{{job.demo}}" class="btn btn-primary " target="_blank">Demo</a>
                     </p>
-
+                    <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
                 </div>
             </div>
         </section>
